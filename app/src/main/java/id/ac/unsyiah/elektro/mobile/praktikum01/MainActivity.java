@@ -48,11 +48,21 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void onClickTombolTerjemah(View view){
+    public void onClickTombolTerjemah(View view) {
         TextView txtTulisan = (TextView) findViewById(R.id.txtTulisan);
-        String apakabar = getString(R.string.apa_kabar);
-        txtTulisan.setText(apakabar);
+
+        if (bahasaIndonesia == false) {
+            String apakabar = getString(R.string.apa_kabar);
+            txtTulisan.setText(apakabar);
+            bahasaIndonesia = true;
+        } else {
+            String helloworld = getString(R.string.hello_world);
+            txtTulisan.setText(helloworld);
+            bahasaIndonesia = false;
+        }
     }
+    private boolean bahasaIndonesia = false;
+
 
     /**
      * A placeholder fragment containing a simple view.
