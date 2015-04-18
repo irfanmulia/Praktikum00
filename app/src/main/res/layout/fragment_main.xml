@@ -7,6 +7,17 @@
     tools:context=".MainActivity$PlaceholderFragment">
 
     <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:id="@+id/txtTulisan" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tombol_terjemah"
+        android:id="@+id/btnTerjemah"
+        android:layout_below="@+id/txtTulisan"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="58dp"
+        android:onClick="onClickTombolTerjemah" />
 
 </RelativeLayout>
